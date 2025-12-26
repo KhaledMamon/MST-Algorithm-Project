@@ -1,59 +1,52 @@
-==================================================
 
-1. # Problem Description
+# 1. Problem Description
+We have (n) buildings and a list of possible connections between the buildings.
 
-We have (n) buildings and a list of possible
-connections between the buildings.
-
-Goal:
+### Goal:
 Construct a Minimum Spanning Tree (MST)
 
-Conditions:
-1 - Connect all buildings
-2 - Minimize total cost
-3 - Avoid cycles
+### Conditions:
+-  Connect all buildings. 
+-  Minimize total cost.
+-   Avoid cycles.
 
-# ==================================================
+------------------------------
 
-2. # Illustrative Input – Output Examples
-
----
+# 2. Illustrative Input – Output Examples
 
 ## Algorithm 1: Naive MST (DFS Cycle Detection)
 
-Example 1
-Input : 50
-Output : 0.001039
+### Example 1:
+- Input : 50
+- Output : 0.001039
 
-Example 2
-Input : 100
-Output : 0.003822
+### Example 2:
+- Input : 100
+- Output : 0.003822
 
-Example 3
-Input : 300
-Output : 0.021743
+### Example 3:
+- Input : 300
+- Output : 0.021743
 
----
+---------------
 
 ## Algorithm 2: Optimized MST (Union-Find / Kruskal)
 
-Example 1
-Input : 50
-Output : 0.000000
+### Example 1:
+- Input : 50
+- Output : 0.000000
 
-Example 2
-Input : 100
-Output : 0.001445
+### Example 2:
+- Input : 100
+- Output : 0.001445
 
-Example 3
-Input : 300
-Output : 0.017499
+### Example 3:
+- Input : 300
+- Output : 0.017499
 
-# ==================================================
+--------------------
 
-3. # Algorithms, Pseudocode, and Description
-
----
+# 3. Algorithms, Pseudocode, and Description
 
 ## Algorithm 1: Naive MST (DFS Cycle Detection)
 
@@ -191,64 +184,45 @@ OPTIMIZED_MST(n):
 
     return mst_edges, mst_cost
 
-# ==================================================
+----------------
 
-4.  # Complexity Analysis
+# 4. Complexity Analysis
 
----
+| Algorithm | Time | Space |
+| ---- | ---- | ---- |
+| Naive MST |  O(n³) | O(n²) |
+| Optimized MST | O(n² log n) | O(n²) |
 
-| ---Algorithm------ | ----Time-------- | ---Space------ |
-| ------------------ | ---------------- | -------------- |
-| ---Naive MST------ | ---- O(n³)------ | ---O(n²)------ |
-| ------------------ | ---------------- | -------------- |
-| --Optimized MST--- | ---O(n² log n)-- | ---O(n²)------ |
+---------------
 
----
-
-# ==================================================
-
-5. # Empirical Results
+# 5. Empirical Results
 
 ## Nodes Naive Time Optimized Time
 
----
-
-| -----Nodes---- | ------Naive------ | ----Optimized---- |
-| -------------- | ----------------- | ----------------- |
-| -----100------ | ------Slow------- | -------Fast------ |
-| -------------- | ----------------- | ----------------- |
-| -----1000----- | ----very Slow---- | -------Fast------ |
-| -------------- | ----------------- | ----------------- |
-| ----10,000---- | ---Impractical--- | ----Acceptable--- |
+| Nodes | Naive | Optimized |
+| ---- | ---- | ---- |
+| 100 | Slow | Fast |
+| 1000 | very Slow | Fast |
+| 10,000 | Impractical | Acceptable |
 
 ---
+# 6. Comparison Discussion
 
-# ==================================================
-
-6.  # Comparison Discussion
-
----
-
-| -----Aspect---- | ------Naive------ | ----Optimized---- |
-| --------------- | ----------------- | ----------------- |
-| --Simplicity--- | ---Very Simple--- | ---More Complex-- |
-| --------------- | ----------------- | ----------------- |
-| --Performance-- | ------ Poor------ | -----Excellent--- |
-| --------------- | ----------------- | ----------------- |
-| --Scalability-- | ----No Scaling--- | ---Scales Well--- |
+| Aspect | Naive | Optimized |
+| ---- | ---- | ---- |
+| Simplicity | Very Simple | More Complex |
+| Performance | Poor | Excellent |
+| Scalability | No Scaling | Scales Well |
 
 ---
 
-# ==================================================
-
-7. # Final Verdict
+# 7. Final Verdict
 
 Naive MST:
-
 - Good for learning purposes
 - Suitable only for very small graphs
 
 Optimized MST:
-
 - The correct choice for real-world problems
 - Efficient for large-scale graphs
+
